@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+       http://www.liquibase.org/xml/ns/dbchangelog
+       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="001-create-clientes" author="jsgh1">
+        <sqlFile path="01_tables/001_create_clientes.sql" relativeToChangelogFile="false"/>
+        <rollback>
+            <sql>DROP TABLE IF EXISTS clientes;</sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="002-create-empleados" author="jsgh1">
+        <sqlFile path="01_tables/002_create_empleados.sql" relativeToChangelogFile="false"/>
+        <rollback>
+            <sql>DROP TABLE IF EXISTS empleados;</sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="003-create-productos" author="jsgh1">
+        <sqlFile path="01_tables/003_create_productos.sql" relativeToChangelogFile="false"/>
+        <rollback>
+            <sql>DROP TABLE IF EXISTS productos;</sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="004-create-pedidos" author="jsgh1">
+        <sqlFile path="01_tables/004_create_pedidos.sql" relativeToChangelogFile="false"/>
+        <rollback>
+            <sql>DROP TABLE IF EXISTS pedidos;</sql>
+        </rollback>
+    </changeSet>
+
+    <changeSet id="005-create-detalle-pedido" author="jsgh1">
+        <sqlFile path="01_tables/005_create_detalle_pedido.sql" relativeToChangelogFile="false"/>
+        <rollback>
+            <sql>DROP TABLE IF EXISTS detalle_pedido;</sql>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
